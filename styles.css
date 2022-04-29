@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+/*font-family: 'Outfit', sans-serif;*/
+
+body {
+    overflow-x: hidden;
+    background-color: hsl(217, 54%, 11%);
+}
+
+
+.card-nft {
+    display: block;
+    margin: 50px auto;
+    width: 300px;
+    height: 550px;
+    background-color: hsl(216, 50%, 16%);
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+
+/*nft*/
+
+.nft .img-bg {
+    background-image: url(./images/image-equilibrium.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    width: 285px;
+    height: 285px;
+    border-radius: 10px;
+    z-index: 3;
+}
+
+.img-bg::before {
+    content: url('./images/icon-view.svg');
+    position: absolute;
+    text-align: center;
+    top: 180px;
+    left: 155px;
+    opacity: 0;
+    transition: opacity 0.5s ease 0s;
+}
+
+
+.img-bg::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    opacity: 1;
+    transition: opacity 0.5s ease 0s;
+}
+
+.img-bg:hover::after,
+.img-bg:hover::before {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.nft .img-bg:hover {
+    background: linear-gradient(0deg,rgb(0, 255, 247,0.5) 50%, rgb(0, 255, 247,0.5) 50%), url(./images/image-equilibrium.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 3;
+}
+
+
+
+.nft h2 {
+    margin-left: 9px;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+}
+
+.nft h2:hover {
+    cursor: pointer;
+    color: hsl(178, 100%, 50%);
+}
+
+.nft p {
+    margin-left: 7px;
+    color: hsl(215, 51%, 70%);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+}
+
+
+/*price-days*/
+
+
+.price-days {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/*price*/
+
+.price {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 10px;
+}
+
+.price img {
+    width: 10px;
+    height: 15px;
+    position: relative;
+    left: -2px;
+    top: 19px;
+}
+
+.price p {
+    color: hsl(178, 100%, 50%);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+
+}
+
+/*days*/
+
+.days {
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    right: -125px;
+}
+
+.days img {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    left: -5px;
+    top: 17px;
+}
+
+.days p {
+    color: hsl(215, 51%, 70%);
+}
+
+
+/*Line*/
+
+.line {
+    display: block;
+    margin: auto;
+    width: 290px;
+    height: 1px;
+    background-color: hsl(215, 32%, 27%);
+}
+
+
+/*person*/
+
+.person {
+    position: relative;
+    display: flex;
+    left: 5px;
+    top: 30px;
+
+}
+
+.person img {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.person p {
+    font-size: 13px;
+    color: white;
+    margin-left: 20px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.person p:hover {
+    cursor: pointer;
+    color: hsl(178, 100%, 50%);
+}
+
+.person p span {
+    color: hsl(215, 51%, 70%);
+    font-family: 'Outfit', sans-serif;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center; 
+    color: hsl(0, 0%, 100%); 
+}
+
+
+.attribution a { 
+    color: hsl(224, 25%, 55%); 
+}
+
+
+@media (min-width: 750px) {
+    .img-bg::before {
+        top: 180px;
+        left: 650px;
+    }
+    
+}
